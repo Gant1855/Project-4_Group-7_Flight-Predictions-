@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+               
+        <title>Flight Price Prediction</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/bootstrap-icons/bootstrap-icons.css">
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+
+    <body>
+        <!-- <img src="../assets/imgs/HeaderImage.jpg"> -->
+        <div class="wrap">
+            <section id="header-img">
+                <div class="header-img-container">
+                    <h1>Flight Price Prediction</h1>
+                    <h2>I tried making airplane jokes but they went right over people's heads.</h2>
+                    <a href="#about" class="btn-get-started">Get Started</a>
+                </div>
+            </section>
+
+            <header id="header" class="d-flex align-items-center">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <div class="logo">
+                        <h1 class="text-light"><a href="https://github.com/aimeevu/group-7-project-4"><span>Group 7</span></a></h1>
+                    </div>
+                
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a href="#about" class="nav-link">About</a></li>
+                            <li><a href="#process" class="nav-link">Our Process</a></li>
+                            <li class="dropdown"><a href="#visualizations"><span>Visualizations</span><i class="bi bi-chevron-down"></i></a>
+                                <ul>
+                                    <li><a href="visual.html#visual-details">Visual 1</a></li>
+                                    <li><a href="visual.html#visual-details-2">Visual 2</a></li>
+                                    <li><a href="visual.html#visual-details-3">Visual 3</a></li>
+                                    <li><a href="visual.html#visual-details-4">Visual 4</a></li>
+                                    <li><a href="visual.html#visual-details-5">Visual 5</a></li>
+                                    <li><a href="visual.html#visual-details-6">Visual 6</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#calculator" class="nav-link">Price Calculator</a></li>
+                            <li><a href="data.html">Data</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <!-- About Section -->
+            <section id="about" class="about section-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <span>About Our Project</span>
+                        <h2>About Our Project</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                            <div class="card">
+                                <img src="../assets/imgs/AboutImage1.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <i class="bx bx-tachometer"></i>
+                                    <h5 class="card-title"><a href="../Resources/Group7Proposal.pdf">Our Proposal</a></h5>
+                                    <p class="card-text">Holidays are right around the corner. It’s time for people to put their travel plans on the calendars. Whether you’re trying to make that last minute flight for Thanksgiving dinner or planning months in advance for that beach vacation trip, what will prices look like? The goal of this project is to predict the flight price on a particular future date using a machine learning algorithm that will train historical data.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-5 mt-md-0 d-flex align-items-stretch">
+                            <div class="card">
+                                <a href="https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction"><img src="../assets/imgs/AboutImage2.jpg" class="card-img-top"></a>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction">Finding Our Dataset</a></h5>
+                                    <p class="card-text">We started off with the idea of a project revolving around stock prices. Given that a lot of APIs are limited or they require a form of payment, we decided to go with flight prices using flight data from <a href="https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction">Kaggle</a>. Additionally, we wanted to see if there was any correlation with fuel prices. To achieve this, we found data on the <a href="https://www.transtats.bts.gov/fuel.asp">Bureau of Transportation Statistics</a> site and <a href="https://www.eia.gov/dnav/pet/hist/eer_epjk_pf4_rgc_dpgD.htm">EIA</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-5 mt-md-0 d-flex align-items-stretch">
+                            <div class="card">
+                                <img src="../assets/imgs/AboutImage3.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dataset Limitations</h5>
+                                    <p class="card-text">With regards to the dataset, we were limited to one that contained only foreign airlines. We have concluded that this was due to limitations revolving around the availability of the data. Any domestic data that we identified required calling to a subscription API and we would run into potential legality issues through webscraping.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- Team Section -->
+                <section id="team" class="team">
+                    <div class="container">
+                        <div class="section-title">
+                            <span>Team</span>
+                            <h2>Team</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/AimeeVu.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/aimeevu">Aimee Vu</a></h4>
+                                            <p>Website Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/BobbyBenedict.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/robertfben">Robert Benedict (Bobby)</a></h4>
+                                            <p>Backend & Flask</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/ChrisHoward.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/choward3413">Chris Howard</a></h4>
+                                            <p>Backend</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/HeeSooOh.png" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/Heesoooh">Heesoo Oh</a></h4>
+                                            <p>Website Design & PowerPoint</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/SargePage.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/sajeanpage">Sarje Page</a></h4>
+                                            <p>Database Guru</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/JarvisLampton.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/jlmamp">Jarvis Lampton</a></h4>
+                                            <p>JavaScript</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/VanteGant.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/Gant1855">Juvante Gant (Vante)</a></h4>
+                                            <p>Tableau Visualizations</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/StevenRufus.png" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/Rufuz42">Steven Rufus</a></h4>
+                                            <p>Backend</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="member">
+                                    <img src="../assets/imgs/JuhitaVijjali.jfif" alt="">
+                                    <div class="member-info">
+                                        <div class="member-info-content">
+                                            <h4><a href="https://github.com/juhitavijjali">Juhita Vijjali</a></h4>
+                                            <p>Database & Backend</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            <!-- Process Section -->
+            <section id="process" class="process section-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <span>Our Process</span>
+                        <h2>Our Process</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>ETL Process</h4>
+                                <p>CSV Files from Kaggle were loaded and merged into Python via Jupyter Notebook.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>Database</h4>
+                                <p>The data was normalized, cleaned, and then inserted into PostgreSQL from Jupyter Notebook.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>Flask API</h4>
+                                <p>This tool was set up in order to connect the data to the site to calculate the flight prices.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>Tableau</h4>
+                                <p>Using Tableau, visualizations were created to provide further insight into the Kaggle dataset.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>Website Design</h4>
+                                <p>By utilizing tools like boostrap, Google fonts, and Coolors, this site was created based on a template from BootstrapMade.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>JavaScript</h4>
+                                <p>Functionality of the button heavily relies on JavaScript in order to initiate the calculation on the backend and display the results on the frontend.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box">
+                                <i class="bi bi-airplane"></i>
+                                <h4>Machine Learning</h4>
+                                <p>Database was queried from PostgreSQL into a tailor-made pandas dataframe for the KNN Regression Model in order to create a price predictor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="image" class="image">
+                <div class="container">
+                    <div class="text-center">
+                        <h3>Adventure awaits</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visualizations Section -->
+            <section id="visualizations" class="visualizations section-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <span>Visualizations</span>
+                        <h2>Visualizations</h2>
+                    </div>
+
+                    <div class="row visual-container">
+                        <div class="col-lg-4 col-md-6 visual-item">
+                            <div class="visual-wrap">
+                                <img src="../Tab WB images/Viz 1.png">
+                                <div class="visual-info">
+                                    <a href="visual.html#visual-details"><h4>Visual 1</h4></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 visual-item">
+                            <div class="visual-wrap">
+                                <img src="../Tab WB images/Viz 2.png">
+                                <div class="visual-info">
+                                    <a href="visual.html#visual-details-2"><h4>Visual 2</h4></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 visual-item">
+                            <div class="visual-wrap">
+                                <img src="../Tab WB images/Viz 3.png">
+                                <div class="visual-info">
+                                    <a href="visual.html#visual-details-3"><h4>Visual 3</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row visual-container">
+                        <div class="col-lg-4 col-md-6 visual-item">
+                            <div class="visual-wrap">
+                                <img src="../Tab WB images/Viz 4.png">
+                                <div class="visual-info">
+                                    <a href="visual.html#visual-details-4"><h4>Visual 4</h4></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 visual-item">
+                            <div class="visual-wrap">
+                                <img src="../Tab WB images/Viz 5.png">
+                                <div class="visual-info">
+                                    <a href="visual.html#visual-details-5"><h4>Visual 5</h4></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 visual-item">
+                            <div class="visual-wrap">
+                                <img src="../Tab WB images/Viz 6.png">
+                                <div class="visual-info">
+                                    <a href="visual.html#visual-details-6"><h4>Visual 6</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="image-2" class="image-2">
+                <div class="container">
+                    <div class="text-center">
+                        <h3>Let your dreams take flight</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Price Calculator Section -->
+            <section id="calculator" class="calculator">
+                <div class="container">
+                    <div class="section-title">
+                        <span>Price Calculator</span>
+                        <h2>Price Calculator</h2>
+                        <p><strong>Disclaimer</strong>: This functionality requires Flask App to be running. Please download necessary files <a href="https://github.com/aimeevu/group-7-project-4">here</a> and run the Flask App to view the function of this button.</p>
+                    </div>
+
+                    <form action="" class="calc-form">
+                        <div class="text-center">
+                            <select name="airline" id="airline">
+                                <option value="0">Select Airline</option>
+                                <option value="1">Air India</option>
+                                <option value="2">AirAsia</option>
+                                <option value="3">GO FIRST</option>
+                                <option value="4">Indigo</option>
+                                <option value="5">SpiceJet</option>
+                                <option value="6">StarAir</option>
+                                <option value="7">Trujet</option>
+                                <option value="8">Vistara</option>
+                            </select>
+
+                            <select name="from_loc" id="from_loc">
+                                <option value="0">Departing City</option>
+                                <option value="1">Bangalore</option>
+                                <option value="2">Chennai</option>
+                                <option value="3">Delhi</option>
+                                <option value="4">Hyderabad</option>
+                                <option value="5">Kolkata</option>
+                                <option value="6">Mumbai</option>
+                            </select>
+
+                            <select name="to_loc" id="to_loc">
+                                <option value="0">Destination City</option>
+                                <option value="1">Bangalore</option>
+                                <option value="2">Chennai</option>
+                                <option value="3">Delhi</option>
+                                <option value="4">Hyderabad</option>
+                                <option value="5">Kolkata</option>
+                                <option value="6">Mumbai</option>
+                            </select>
+
+                            <select name="depart" id="depart">
+                                <option value="0">Departure Time Frame</option>
+                                <option value="1">Early Morning</option>
+                                <option value="2">Late Morning</option>
+                                <option value="3">Early Afternoon</option>
+                                <option value="4">Late Afternoon</option>
+                                <option value="5">Evening</option>
+                                <option value="6">Late Night</option>
+                            </select>
+
+                            <select name="arrive" id="arrive">
+                                <option value="0">Arrival Time Frame</option>
+                                <option value="1">Early Morning</option>
+                                <option value="2">Late Morning</option>
+                                <option value="3">Early Afternoon</option>
+                                <option value="4">Late Afternoon</option>
+                                <option value="5">Evening</option>
+                                <option value="6">Late Night</option>
+                            </select>
+
+                            <select name="seatclass" id="seatclass">
+                                <option value="0">Seat Class</option>
+                                <option value="1">Business</option>
+                                <option value="2">Economy</option>
+                            </select>
+
+                            <select name="stop" id="stop">
+                                <option value="0">Select Stops</option>
+                                <option value="1">1-stop</option>
+                                <option value="2">2-stops</option>
+                                <option value="3">Non-stop</option>
+                            </select>
+
+                        </div>
+                        <div class="text-center">
+                            <button id="calc" type="submit" onclick="predictprice()">Calculate</button><br><br>
+                            <label id="ticketprice"><strong>Ticket Price: $0.00</strong></label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="footer-top section-bg">
+                <div class="container py-4">
+                    <div class="copyright">
+                      &copy; Copyright <strong><span>Plato</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                      <!-- All the links in the footer should remain intact. -->
+                      <!-- You can delete the links only if you purchased the pro version. -->
+                      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/ -->
+                      Original Design by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                    <div class="credits">
+                        Other Credits: <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+                    </div>
+                  </div>
+            </footer>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--Ending Bootstrap Code-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous"></script>        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+        crossorigin="anonymous"></script>
+
+        <!--<script src="../assets/js/main.js"></script>-->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="{{ url_for('static', filename='../assets/js/app.js') }}"></script>   
+
+    </body>
+</html>
